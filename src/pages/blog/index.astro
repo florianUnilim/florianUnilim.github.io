@@ -85,10 +85,10 @@ const posts = (await getCollection('blog')).sort(
 			}
 		</style>
 	</head>
-	<body>
+	<body class="bg-[#302E2B]">
 		<Header />
-		<main>
-			<section>
+		<main class=" flex flex-col align-center justify-center ml-[20%] mb-5  text-white ">
+			<section >
 				<ul>
 					{
 						posts.map((post) => (
