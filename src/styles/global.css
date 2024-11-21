@@ -30,15 +30,15 @@
 	font-display: swap;
 }
 body {
-	font-family: 'Atkinson', sans-serif;
+	font-family: 'poppins', sans-serif;
 	margin: 0;
 	padding: 0;
-	text-align: left;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
+	text-align: center;
+	background: #1E212B;
 	background-size: 100% 600px;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	color: rgb(var(--gray-dark));
+	color: #ffffff;
 	font-size: 20px;
 	line-height: 1.7;
 }
@@ -55,7 +55,7 @@ h4,
 h5,
 h6 {
 	margin: 0 0 0.5rem 0;
-	color: rgb(var(--black));
+	color: #ffffff;
 	line-height: 1.2;
 }
 h1 {
@@ -106,7 +106,7 @@ img {
 }
 code {
 	padding: 2px 5px;
-	background-color: rgb(var(--gray-light));
+	background-color: #FF8427;
 	border-radius: 2px;
 }
 pre {
@@ -117,7 +117,7 @@ pre > code {
 	all: unset;
 }
 blockquote {
-	border-left: 4px solid var(--accent);
+	border-left: 4px solid #FF8427;
 	padding: 0 0 0 20px;
 	margin: 0px;
 	font-size: 1.333em;
@@ -151,4 +151,11 @@ hr {
 	clip-path: inset(50%);
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
+}
+
+.header{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 25vh;
 }
