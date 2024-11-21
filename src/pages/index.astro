@@ -4,42 +4,35 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
-
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body >
-		<Header />
-		<main>
-			<h1>Bienvenu sur mon portfolio!</h1>
-			<p>
-				Je suis actuellement étudiant en Métier du multimédia et de l'internet  à Limoges. Passionné par la création numérique, le web design je m'efforce de créer des expériences visuelles impactantes.
-			</p>
-			<p>
-				
-			</p>
-			<p></p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="flex flex-col min-h-screen bg-[#302E2B] text-white">
+    <!-- Barre verticale gauche -->
+    <div class="flex flex-1">
+      <Header />
+      <!-- Contenu principal -->
+      <main class="flex-1 p-4 ml-[15%]">
+        <div class="flex flex-col">
+          <h1>Bienvenue sur mon portfolio!</h1>
+          <p>
+            Je suis actuellement étudiant en Métiers du multimédia et de l'Internet à Limoges. Passionné par la création numérique et le web design, je m'efforce de créer des expériences visuelles impactantes.
+          </p>
+          <ul>
+            <li>Edit this page in <code>src/pages/index.astro</code></li>
+            <li>Edit the site header items in <code>src/components/Header.astro</code></li>
+            <li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
+            <li>Check out the included blog posts in <code>src/content/blog/</code></li>
+          </ul>
+          <p>
+            Have fun! If you get stuck, remember to <a href="https://docs.astro.build/">read the docs</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
+          </p>
+        </div>
+      </main>
+    </div>
+    <!-- Footer -->
+    <Footer />
+  </body>
 </html>

@@ -1,17 +1,19 @@
 ---
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
----
-
-<header class=" bg-[#262522] text-white flex flex-col">
-	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
-		<div class="internal-links ">
+--- 
+<div class="flex flex-col md:flex-row h-screen fixed z-100">
+<header class="bg-[#262522] text-white flex flex-col h-screen w-10%">
+	<nav class="flex flex-col items-start p-4 space-y-4">
+		<h2 class="text-2xl font-bold"><a href="/">{SITE_TITLE}</a></h2>
+		<div class="internal-links flex flex-col space-y-2">
 			<HeaderLink href="/">Accueil</HeaderLink>
+			<HeaderLink href="/about">A propos </HeaderLink>
 			<HeaderLink href="/blog">Mes projets</HeaderLink>
-			<HeaderLink href="/about">about</HeaderLink>
+			<HeaderLink href="">Mes experiences</HeaderLink>
+			<HeaderLink href="">Contact</HeaderLink>
 		</div>
-		<div class="social-links ">
+		<div class="social-links flex flex-col space-y-2 align-bottom">
 
 			<a href="https://github.com/florianUnilim" target="_blank">
 				<span class="sr-only">Va voir mon github !</span>
@@ -33,6 +35,7 @@ import { SITE_TITLE } from '../consts';
 					</div>
 	</nav>
 </header>
+</div>
 <style>
 	header {
 		margin: 0;
@@ -62,7 +65,8 @@ import { SITE_TITLE } from '../consts';
 	}
 	nav a.active {
 		text-decoration: none;
-		border-bottom-color: #FF8427;
+		width: 90%;
+		border-bottom-color: #81B64C;
 	}
 	.social-links,
 	.social-links a {
