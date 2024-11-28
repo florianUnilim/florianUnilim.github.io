@@ -3,6 +3,10 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { getCollection } from 'astro:content';
+const lastPost = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+)[0];
 ---
 <!doctype html>
 <html lang="en">
@@ -10,6 +14,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body class="flex flex-col min-h-screen bg-[#302E2B] text-white">
+    
     <!-- Barre verticale gauche -->
     <div class="flex flex-1">
       <Header />
@@ -18,7 +23,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
         <!-- haut-->
         <div>
-        <div class="flex flex-row items-center">
+        <div class="flex flex-row items-center pt-10">
           <img src="/photodeprofil2.jpg" class=" h-10" />
           <p class="pl-3">Florian DENIS - étudiant en BUT MMI</p>
         </div>
@@ -26,12 +31,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
       <div class="flex flex-col lg:flex-row">
       <!-- coté gauche-->
-      <div class=" h-screen w-full lg:w-2/6 ">
-        <div class="flex flex-col bg-[#262522] w-2/3 h-10">
-
-
-        </div>
-
+      <div class=" w-full h-1/2 lg:w-2/6 ">
+        <a class="flex flex-row bg-[#262522] w-2/3 h-16 mt-10 items-center justify-center shadow-" href={`/blog/${lastPost.slug}/`}>
+          <img src="/ampoule.png" class="h-10" />
+          <p class="pl-3">Mon dernier projet</p>
+        </a>
       </div>
        <!-- coté droit-->
         <div class=" bg-red-700 h-screen w-full lg:w-4/6">
