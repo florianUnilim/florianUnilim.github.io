@@ -33,34 +33,36 @@ const lastPost = (await getCollection('blog')).sort(
       <!-- coté gauche-->
        <div class="flex flex-col h-1/2 w-1/2">  
       <div class=" w-full h-1/2 lg:w-3/4 rounded-xl ">
-        <a class="flex flex-row bg-[#262522] w-2/3 h-16 mt-10 items-center justify-center shadow-" href={`/blog/${lastPost.slug}/`}>
-          <img src="/ampoule.png" class="h-10" />
+        <a class="flex flex-row bg-[#262522] w-2/3 h-16 mt-10 items-center justify-start pl-5 shadow-md shadow-black" href={`/blog/${lastPost.slug}/`}>
+          <img src="/ampoule.png" class="h-10" alt="dossier projet" />
+          <p class="pl-3">Mon dernier projet</p>
+        </a>
+      </div>
+      <div class="  w-full h-1/2 lg:w-3/4 ">
+        <a class="flex flex-row bg-[#262522] w-2/3 h-16 mt-10 items-center justify-start pl-5 shadow-md shadow-black" href="">
+          <img src="/ampoule.png" class="h-10" alt="" />
           <p class="pl-3">Mon dernier projet</p>
         </a>
       </div>
       <div class=" w-full h-1/2 lg:w-3/4 ">
-        <a class="flex flex-row bg-[#262522] w-2/3 h-16 mt-10 items-center justify-center shadow-" href={`/blog/${lastPost.slug}/`}>
-          <img src="/ampoule.png" class="h-10" />
-          <p class="pl-3">Mon dernier projet</p>
+        <a class="flex flex-row bg-[#262522] w-2/3 h-16 mt-10 items-center justify-start pl-5 shadow-md shadow-black " href="">
+          <img src="/cv.png" class="h-10" alt="mon cv" />
+          <p class="pl-3">Mon CV</p>
         </a>
       </div>
+      
       <div class="  w-full h-1/2 lg:w-3/4 ">
-        <a class="flex flex-row bg-[#262522] w-2/3 h-16 mt-10 items-center justify-center shadow-" href={`/blog/${lastPost.slug}/`}>
-          <img src="/ampoule.png" class="h-10" />
-          <p class="pl-3">Mon dernier projet</p>
-        </a>
-      </div>
-      <div class="  w-full h-1/2 lg:w-3/4 ">
-        <a class="flex flex-row bg-[#262522] w-2/3 h-16 mt-10 items-center justify-center shadow-" href={`/blog/${lastPost.slug}/`}>
-          <img src="/ampoule.png" class="h-10" />
-          <p class="pl-3">Mon dernier projet</p>
+        <a class="flex flex-row bg-[#262522] w-2/3 h-16 mt-10 items-center justify-start pl-5 shadow-md shadow-black" href="">
+          <img src="/contact.png" class="h-10" alt="contact"/>
+          <p class="pl-3">Me contacter</p>
         </a>
       </div>
     </div>
       
        <!-- coté droit-->
         <div class=" bg-red-700 h-screen w-full lg:w-4/6">
-
+          <div class="h-2/3 w-2/3 bg-black"></div>
+          
         </div>
       </div>
       </main>
