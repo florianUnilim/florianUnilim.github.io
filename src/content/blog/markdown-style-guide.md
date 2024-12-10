@@ -5,4 +5,12 @@ pubDate: 'Mars 2023'
 heroImage: '/mosandbeerlogo.png'
 ---
 
-<embed src="/mosandbeer.pdf" width="100%" height="600px" type="application/pdf">
+Nous devions faire la communication d'un bar à thème de notre choix, nous avons décidé de créer la communication d'un bar à bière écologiste.
+
+
+
+
+-------
+
+
+<img src="/mosandbeer-1.png" alt="mosandbeer">
