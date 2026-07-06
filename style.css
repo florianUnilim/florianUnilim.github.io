@@ -270,6 +270,8 @@ h2 {
   background: rgba(250,248,244,0.14);
   border: 1px solid rgba(250,248,244,0.3);
   border-radius: 4px;
+  margin: 0 6px;
+  padding: 0; display: flex; align-items: center; justify-content: center;
 }
 .deco-screen.desktop { width: 52%; aspect-ratio: 16/10; }
 .deco-screen.mobile { width: 18%; aspect-ratio: 9/16; border-radius: 10px; }
