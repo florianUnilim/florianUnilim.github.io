@@ -117,7 +117,7 @@ h1 {
 h1 .accent { color: var(--vert-foret); }
 .hero-desc {
   font-size: 1rem; line-height: 1.85;
-  color: var(--gris-beige); max-width: 420px;
+  color: var(--gris-beige); max-width: 100%;
   margin-bottom: 2.5rem; font-weight: 300;
   text-align: justify;
 }
@@ -816,7 +816,7 @@ body.projet-page .hero-desc {
   line-height: 1.85;
   color: var(--gris-beige);
   font-weight: 300;
-  max-width: 480px;
+  max-width: 100%;
 }
 
 body.projet-page .hero-meta {
@@ -1005,7 +1005,7 @@ body.projet-page .prose {
   line-height: 1.9;
   color: var(--brun-texte);
   font-weight: 300;
-  max-width: 640px;
+  max-width: 100%;
   margin-bottom: 1rem;
 }
 
@@ -1089,7 +1089,7 @@ body.projet-page .ps-desc {
   line-height: 1.7;
   color: var(--gris-beige);
   font-weight: 300;
-  max-width: 500px;
+  max-width: 100%;
 }
 
 body.projet-page .ps-tag {
@@ -1134,7 +1134,7 @@ body.projet-page .img-full {
 }
 
 body.projet-page .img-full.tall {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9;
 }
 
 body.projet-page .img-2col {
