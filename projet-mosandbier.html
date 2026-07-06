@@ -15,7 +15,7 @@
 <div class="cursor-ring" id="cursorRing"></div>
 
 <!-- NAV -->
-<nav>
+<nav class="nav-fixe">
   <a href="#" class="logo"><span>Florian</span> Denis</a>
   <ul class="nav-links">
     <li><a href="#projets">Projets</a></li>
@@ -306,7 +306,7 @@
 <!-- NAV PROJETS -->
 <nav class="nav-projets">
   <!-- [MODIFIER] -->
-  <a href="projet-template.html" class="np-item">
+  <a href="#" class="np-item">
     <div class="np-arrow">←</div>
     <div class="np-info">
       <div class="np-dir">Projet précédent</div>
@@ -314,7 +314,7 @@
       <div class="np-type">Branding · Figma</div>
     </div>
   </a>
-  <a href="projet-template.html" class="np-item">
+  <a href="#" class="np-item">
     <div class="np-info">
       <div class="np-dir">Projet suivant</div>
       <div class="np-titre">Interface SaaS Analytics</div>
@@ -325,8 +325,9 @@
 </nav>
 
 <footer>
-  <div class="footer-logo">votre<span>nom</span>.design</div>
-  <div class="footer-r">Nantes, France · 2026</div>
+  <div class="footer-logo"><span>Florian</span> Denis</div>
+  <div class="footer-r footer-link"><p>© 2026 Florian Denis — <a href="mentions-legales.html" class="mentions-legales">Mentions légales</a></p></div>
+  <div class="footer-r">Vannes, France · 2026</div>
 </footer>
 
 
@@ -349,6 +350,31 @@ const obs = new IntersectionObserver(entries=>{
 document.querySelectorAll('.reveal, .line-reveal').forEach(el=>{
   if(el.getBoundingClientRect().top < window.innerHeight) el.classList.add('show');
   else obs.observe(el);
+});
+
+
+// On cible ta barre de navigation
+const navProjets = document.querySelector('.nav-projets');
+
+// On mémorise la dernière position du scroll
+let dernierePositionScroll = 0;
+
+window.addEventListener('scroll', () => {
+    // On récupère la position actuelle du scroll
+    let positionActuelle = window.scrollY;
+    
+    // On vérifie si on descend ou on monte
+    if (positionActuelle > dernierePositionScroll && positionActuelle > 100) {
+        // SCROLL VERS LE BAS (et on a passé les 100 premiers pixels)
+        navProjets.classList.add('hidden');
+    } else {
+        // SCROLL VERS LE HAUT
+        navProjets.classList.remove('hidden');
+    }
+    
+    // On met à jour la dernière position pour le prochain calcul
+    // Le Math.max(0, ...) évite un bug sur les téléphones (l'effet de rebond)
+    dernierePositionScroll = Math.max(0, positionActuelle); 
 });
 </script>
 </body>

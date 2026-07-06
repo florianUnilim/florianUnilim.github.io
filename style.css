@@ -55,7 +55,7 @@ a{
   border-color: var(--beige-clair);
 }
 
-nav {
+.nav-fixe {
   position: fixed; top: 0; left: 0; right: 0;
   display: flex; align-items: center; justify-content: space-between;
   padding: 1.4rem 4rem;
@@ -1286,10 +1286,26 @@ body.projet-page .btn-blanc:hover {
   transform: translateY(-2px);
 }
 
+
 body.projet-page .nav-projets {
+  position: fixed; bottom: 0; left: 0; right: 0;
   display: grid;
+  align-items: center;
+  z-index: 100;
   grid-template-columns: 1fr 1fr;
   border-top: 1px solid var(--beige-moyen);
+  background: rgba(250,248,244,0.93);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--beige-moyen);
+  
+
+  transition: transform 0.8s cubic-bezier(0.3, 0, 0.2, 1);
+}
+
+
+body.projet-page .nav-projets.hidden {
+
+  transform: translateY(100%); 
 }
 
 body.projet-page .np-item {
