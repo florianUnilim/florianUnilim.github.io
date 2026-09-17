@@ -589,7 +589,7 @@ footer {
 @media (max-width: 900px) {
   nav { padding: 1.1rem 1.5rem; }
   .nav-links { display: none; }
-  .hero { grid-template-columns: 1fr; padding: 7rem 1.5rem 3rem; }
+  .hero { grid-template-columns: 1fr; padding: 0rem 1.5rem 3rem; }
   .hero-right { display: none; }
   section { padding: 3.5rem 1.5rem; }
   .projets-grid { display: flex; flex-direction: column; }
